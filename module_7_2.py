@@ -6,6 +6,7 @@ def custom_write(file_name, strings):
         start_byte = file.tell()
         file.write(line + '\n')
         strings_positions[(line_num, start_byte)] = line
+    file.close()
     return strings_positions
 
 
