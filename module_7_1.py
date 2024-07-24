@@ -9,11 +9,10 @@ class Product:
 
 
 class Shop:
-    __file_name = 'products.txt'
-
-    def get_products(self):
+    @staticmethod
+    def get_products():
         try:
-            with open(self.__file_name, 'r') as file:
+            with open('products.txt', 'r') as file:
                 return file.read().strip()
         except FileNotFoundError:
             return ''
@@ -22,7 +21,7 @@ class Shop:
         ex_product = self.get_products()
         ex_names = {line.split(', ')[0] for line in ex_product.split('\n') if line}
 
-        with open(self.__file_name, 'a') as file:
+        with open('products.txt', 'a') as file:
             for product in products:
                 if product.name in ex_names:
                     print(f'Продукт {product.name} уже есть в магазине')
