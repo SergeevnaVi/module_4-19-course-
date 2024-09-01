@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 
 # Запрос данных о погоде в разных городах
-api_key = '7b2a9f86c7b8cf985f24557f6ee25e21'
+api_key = 'token'
 cities = ['Москва', 'Париж', 'Чикаго', 'Стамбул', 'Казань']
 weather_data = []
 
