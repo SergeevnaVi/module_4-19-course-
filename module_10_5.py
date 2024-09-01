@@ -25,7 +25,7 @@ print(f'Время выполнения линейного вызова: {end - 
 # Многопроцессный
 start = datetime.datetime.now()
 if __name__ == '__main__':
-    with multiprocessing.Pool() as pool:
+    with multiprocessing.Pool(processes=4) as pool:
         pool.map(read_info, filenames)
     end = datetime.datetime.now()
     print(f'Время выполнения многопроцессного вызова: {end - start}')
