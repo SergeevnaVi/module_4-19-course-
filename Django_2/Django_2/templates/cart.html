@@ -1,0 +1,20 @@
+{% extends 'menu.html' %}
+
+{% block pagename %}
+<h1>{{ text }}</h1>
+{% endblock %}
+
+{% block content %}
+<ul>
+    {% for product in products %}
+        <li><a href="/platform/shop">{{ product.title}} | {{product.description}}. Стоимость: {{product.cost }}</a> <button>{{ text4 }}</button> <button>{{ text6 }}</button></li>
+    <br>
+    {% endfor %}
+</ul>
+<hr>
+<br>
+<button>{{ text7 }}</button>
+<br>
+<br>
+<a href="/platform"><button>{{ text5 }}</button></a>
+{% endblock %}
